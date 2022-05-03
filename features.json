@@ -1,0 +1,98 @@
+{
+    "title": "new feature",
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome9",
+    "definitions": {
+        "Welcome9": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "feature": {
+                    "type": "string"
+                },
+                "role": {
+                    "type": "string"
+                },
+                "validations": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Validation"
+                    }
+                },
+                "testCases": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TestCase"
+                    }
+                }
+            },
+            "required": [
+                "feature",
+                "role"
+            ],
+            "title": "Welcome9"
+        },
+        "TestCase": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "coderId": {
+                    "type": "string"
+                },
+                "dataSet": {
+                    "$ref": "#/definitions/DataSet"
+                },
+                "statements": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "coderId",
+                "dataSet",
+                "name",
+                "statements"
+            ],
+            "title": "TestCase"
+        },
+        "DataSet": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "dataHeader": {
+                    "type": "string"
+                },
+                "dataValues": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "dataHeader",
+                "dataValues"
+            ],
+            "title": "DataSet"
+        },
+        "Validation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "statements": {
+                    "type": "string"
+                },
+                "message": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "statements"
+            ],
+            "title": "Validation"
+        }
+    }
+}

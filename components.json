@@ -1,0 +1,105 @@
+{
+    "title": "new component",
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome10",
+    "definitions": {
+        "Welcome10": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "defaultPath": {
+                    "type": "string"
+                },
+                "defaultSuccessHttpStatus": {
+                    "type": "integer"
+                },
+                "defaultRole": {
+                    "type": "string"
+                },
+                "defaultDocumentation": {
+                    "type": "string"
+                },
+                "defaultModule": {
+                    "type": "string"
+                },
+                "defaultValidatorComp": {
+                    "type": "string"
+                },
+                "methods": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Method"
+                    }
+                }
+            },
+            "required": [
+                "defaultDocumentation",
+                "defaultModule",
+                "defaultPath",
+                "defaultRole",
+                "defaultSuccessHttpStatus",
+                "defaultValidatorComp",
+                "description",
+                "methods",
+                "name",
+                "type"
+            ],
+            "title": "Welcome10"
+        },
+        "Method": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "feature": {
+                    "type": "string"
+                },
+                "httpMethod": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "params": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "return": {
+                    "type": "string"
+                },
+                "statements": {
+                    "type": "string"
+                },
+                "documentation": {
+                    "type": "string"
+                },
+                "body": {
+                    "type": "string"
+                },
+                "successHttpStatus": {
+                    "type": "integer"
+                },
+                "template": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "feature",
+                "httpMethod",
+                "name",
+                "statements"
+            ],
+            "title": "Method"
+        }
+    }
+}
